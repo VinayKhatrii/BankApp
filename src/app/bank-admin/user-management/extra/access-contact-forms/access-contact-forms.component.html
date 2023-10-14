@@ -1,0 +1,22 @@
+<div class="contact-form-details">
+    <h3>These people have filled contact form.</h3>
+    <table>
+        <thead>
+            <td><b>Sr no.</b></td>
+            <td><b>Name</b></td>
+            <td><b>Email</b></td>
+            <td><b>Phone</b></td>
+            <td><b>Message</b></td>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let detail of contact_form_details; let i = index" >
+                <td>{{ i + 1 }}</td>
+                <td>{{detail.name}}</td>
+                <td>{{detail.email}}</td>
+                <td>{{detail.phone}}</td>
+                <td>{{detail.message}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

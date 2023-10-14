@@ -1,0 +1,14 @@
+<div class="counter-container">
+  <video class="counter-video" [muted]="true" [autoplay]="true" [loop]="true">
+    <source src="assets/videos/GraphBackground.mp4" type="video/mp4">
+  </video>
+  <div class="counter-content">
+    <div class="counters row">
+      <div *ngFor="let counter of counters" class="counter">
+        <h2 class="headingForCounter">{{ counter.currentCount }} {{counter.counterAfter}}</h2>
+        <p class="descForCounter">{{counter.label}}</p>
+    </div>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,57 @@
+.bestServices {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.bestServices .small{
+    font-weight: bold;
+    color: var(--blue);
+}
+.servicesHome {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bestServices .dualHeading .dualHeadingInner{
+    color:var(--blue);
+    font-size: 25px;
+    
+}
+.bestServices .dualHeading h2{
+    color:#3b3b3b;
+    margin-top:0px;
+}
+.service {
+    flex-basis: calc(33.33% - 20px); 
+    margin: 10px;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 1100px) {
+    .service {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 550px) {
+    .service {
+        flex-basis: 100%;
+        width:100%;
+    }
+}
+
+.servicesHome .service {
+    box-shadow: 0px 0px 3px 3px #ccc;
+    border-radius: 5px;
+    
+    padding: 10px;
+}
+.service .serviceDesc p {
+    font-size: 14px;
+}
+.bestServiceIcon img{
+    width:25px;
+    margin-right:5px;
+}
+.upperSmallDesc{
+    vertical-align: middle;
+}

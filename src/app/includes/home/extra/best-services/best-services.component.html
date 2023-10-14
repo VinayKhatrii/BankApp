@@ -1,0 +1,32 @@
+<div class="inner-container bestServices">
+    <div class="upperSmallDesc">
+        <span class="bestServiceIcon">
+            <img src="assets/images/servicesIcon.svg" alt="Icon">
+        </span>
+        <span class="small">Best Services</span>
+    </div>
+    <div class="serviceHeading sentence-case dualHeading">
+        <h2>Entirely Providing best <span class="dualHeadingInner">services</span></h2>
+        
+    </div>
+    <div class="serviceDesc">
+        At International Bank, we are committed to being your trusted financial partner, offering a range of cutting-edge services to elevate your banking experience. Our website is designed with your needs in mind, providing seamless access to a world of convenience, security, and personalized solutions.
+    </div>
+    <div class="serviceSections">
+        <div class="servicesHome">
+            <div class="service" *ngFor="let service of services">
+                <div class="serviceImage">
+                    <figure>
+                        <img [src]="service.imagePath" width="60px" height="60px" [alt]="service.alt">
+                    </figure>
+                </div>
+                <div class="headingService sentence-case">
+                    <h3>{{service.service}}</h3>
+                </div>
+                <div class="serviceDesc">
+                    <p>{{service.serviceDesc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

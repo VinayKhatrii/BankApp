@@ -1,0 +1,61 @@
+.login-form .submit .generalButton{
+    padding:10px;
+}
+.login-form{
+    text-align: center;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+}
+.login-form form{
+    display:flex;
+    border:1px solid var(--blue);
+    box-shadow: 3px 3px 5px 0px var(--blue);
+    width:75%;
+    padding:40px;
+    margin:40px;
+    flex-direction: column;
+}
+.login-form form .label{
+    width:25%;
+    align-items: center;
+}
+.login-form form input[type="text"], .login-form form input[type="password"]{
+    padding:10px;
+}
+.login-form form .other{
+    width:75%;
+    display:flex;
+    flex-direction: column;
+}
+@media(max-width:768px){
+    .login-form form{
+        padding:20px;
+        margin:10px;
+    }
+    .login-form form .label{
+        display:none;
+    }
+    .login-form form .other{
+        width:90%;
+    }
+}
+.login-form form div{
+    display:flex;
+    padding:10px;
+}
+
+.login-form form div input:not(input[type="submit"]){
+    width:100%;
+}
+.error_message{
+    font-size:10px;
+    color: rgb(255, 59, 59);
+}
+.login-form .submit{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}

@@ -1,0 +1,80 @@
+<div class="header-image contact-us">
+  <div class="inner-container">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for all your banking needs and inquiries.</p>
+  </div>
+</div>
+<section class="contact-us">
+    <div class="container">
+            <div class="contactform">
+                <div class="heading">
+                    <h2>Enter your information to receive a call.</h2>
+                </div>
+                <div class="form angularform">  
+                    <form (ngSubmit)="submitContactDetails()" [formGroup]="contact_form">
+                      <div class="error">
+                        
+                      </div>
+                        <div class="form-group">
+                          <label for="name" class="requiredLabel">Name</label>
+                          <input type="text" id="name" name="name" formControlName="name" placeholder="Your name..." required>
+                        </div>
+                        <div class="form-group">
+                          <label for="email" class="requiredLabel">Email</label>
+                          <input type="email" id="email" name="email" formControlName="email" placeholder="Your email..." required>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone" class="requiredLabel">Phone</label>
+                          <input type="number" id="phone" name="phone" formControlName="phone" placeholder="Your phone number..." required>
+                        </div>
+                        <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message" formControlName="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="generalButton" style="padding:10px 20px;">Submit</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <div class="extra-contact-details">
+                <div class="contact-detail-wrapper">
+                  <div class="heading">
+                    <h3>Have an emergency? Call us</h3>
+                  </div>
+                  <div class="phone">
+                    <a href="tel:919876543210" target="_blank">+91 9876543210</a>
+                  </div>
+                </div>
+                <div class="contact-detail-wrapper">
+                  <div class="heading">
+                    <h3>Contact by email</h3>
+                  </div>
+                  <div class="email">
+                    <a href="mailto:contact@xyz.com" target="_blank">contact@xyz.com</a>
+                  </div>
+                </div>
+                <div class="contact-detail-wrapper">
+                  <div class="heading">
+                    <h3>Follow Us</h3>
+                  </div>
+                  <div class="social-icons">
+                    <div class="facebook" >
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="assets/images/facebook.svg" alt="facebook">
+                      </a>
+                    </div>
+                    <div class="instagram">
+                      <a href="https://instagram.com" target="_blank">
+                        <img src="assets/images/instagram.svg" alt="instagram">
+                      </a>
+                    </div>
+                    <div class="twitter" target="_blank">
+                      <img src="assets/images/twitter.svg" alt="twitter">
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+</section>

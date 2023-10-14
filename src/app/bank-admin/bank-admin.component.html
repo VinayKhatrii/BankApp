@@ -1,0 +1,16 @@
+<div class="login admin">
+    <form class="admin-form" id="admin-form" (ngSubmit)="adminSubmit()" #adminLoginForm='ngForm'>
+        <span class="error_msg" style="color:rgb(214, 9, 9); font-size:14px;">{{error_msg}}</span>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" [(ngModel)]="data.username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" [(ngModel)]="data.password">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="generalButton"> 
+        </div>
+    </form>
+</div>

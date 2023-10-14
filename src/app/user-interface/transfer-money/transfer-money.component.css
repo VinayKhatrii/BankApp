@@ -1,0 +1,16 @@
+@media (min-width:768px){
+    .transfer-money{
+        width:50%;
+    }
+}
+.transfer-money .form-group{
+    margin-top:30px;
+}
+.transfer-money input{
+    width:100%;
+    padding: 10px 7px;
+}
+.transfer-money .form-group .error{
+    font-size:14px;
+    color:rgb(210, 8, 8);
+}

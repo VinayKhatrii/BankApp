@@ -1,0 +1,19 @@
+.changeUserDetails{
+    margin: 10px 30px;
+}
+.changeUserDetails .hint{
+font-size:14px;
+color:rgb(219, 23, 23);
+}
+.changeUserDetails input:not(input[type="checkbox"]), .changeUserDetails select{
+    padding: 8px 5px;
+    border-radius: 2px;
+    width:100%;
+    border: 0.5px solid #ccc;
+}
+.changeUserDetails form{
+    width:50%;
+}
+.changeUserDetails .form-group{
+    margin: 20px 0px;
+}

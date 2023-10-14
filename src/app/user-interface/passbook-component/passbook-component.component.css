@@ -1,0 +1,21 @@
+.transaction-row, .passbook-details .headings{
+    display:flex;
+    justify-content: space-around;  
+    text-align: center;
+    width: 100%;
+}
+.transaction-row div, .passbook-details .headings div{
+    width: 20%;
+    padding:10px;
+    border:1px solid #000;  
+}
+.sort input, .sort select{
+    padding:5px 7px;
+}
+.sort{
+    display:flex;
+    justify-content: space-around;
+}
+.sort .group label, .sort .group select, .sort .group input{
+    margin:10px;
+}

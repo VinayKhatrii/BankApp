@@ -1,0 +1,21 @@
+.error_msg{
+    color:rgb(186, 18, 18);
+    font-size:14px;
+}
+.add-admin .form-group{
+    margin:10px;
+    padding:5px;
+}
+.add-admin input:not(input[type='submit'], input[type='button']){
+    padding: 10px 5px;
+    font-size:16px;
+    width:100%;
+}
+.add-admin input[type='button']{
+    padding:5px 10px;
+}
+@media (min-width:768px){
+    .add-admin form{
+        width:50%;
+    }
+}

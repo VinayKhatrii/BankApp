@@ -1,0 +1,39 @@
+.user-management{
+    display:flex;
+    padding:3rem;
+    position: relative;
+}
+@media (max-width:768px) {
+    .user-management{
+        flex-direction: column;
+    }
+    .user-management .left-sidebar{
+        width:100% !important;
+    }
+    .user-management .user-management-output{
+        width:100% !important;
+    }
+    
+}
+.user-management .left-sidebar{
+    width:25%;
+}
+.user-management .user-management-output{
+    width:75%;
+}
+
+.user-management ul li div{
+    cursor: pointer;
+    padding:10px;
+    margin:5px;
+    border:1px solid var(--blue);
+}
+.user-management ul li div:hover{
+    background-color: var(--blue);
+    color:#ffffff;
+    transition: 0.2s ease;
+}
+.user-management ul li div.active{
+    background-color: var(--blue);
+    color:#ffffff;
+}

@@ -1,0 +1,50 @@
+.apply-for-loan{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    align-items: center;
+}
+@media (max-width:500px) {
+    .apply-for-loan{
+        flex-direction: column;
+        width:100%;
+    }
+
+}
+.apply-for-loan .form-group{
+    display: flex;
+    margin:10px;
+    width:100%;
+    flex-direction: column;
+}
+
+.apply-for-loan .name-group{
+    display:flex;
+    justify-content: space-between;
+}
+.apply-for-loan .name-group .form-group{
+    margin:0px;
+}
+.apply-for-loan .name-group .form-group #first-name{
+    margin-right:10px;
+}
+.apply-for-loan input, .apply-for-loan select, .apply-for-loan textarea{
+    padding:7px 5px;
+    border:0.5px solid #b5b5b5;
+    border-radius:2px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.apply-for-loan label{
+    font-size:14px;
+    margin-bottom: 5px;
+}
+.apply-for-loan textarea{
+    resize: none;
+}
+

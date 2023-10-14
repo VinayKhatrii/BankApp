@@ -1,0 +1,26 @@
+.search-wrapper input[type='search']{
+    width: 100%;
+}
+.search-outlet{
+    position: absolute;
+    width:25vw;
+    background-color: #fff;
+    padding:20px;
+    left:70vw;
+    border-radius: 10px;
+    z-index:999;
+}
+@media (max-width:768px){
+    .search-outlet{
+        left:0vw;
+        width:90%;
+    }
+}
+.search-wrapper #search{
+    padding:10px;
+    border-radius: 5px;
+}
+.search-outlet .result{ 
+    padding:5px;
+    margin:5px;
+}

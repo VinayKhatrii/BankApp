@@ -1,0 +1,10 @@
+<div class="onlineBankingLogin">
+    <h3>Online Banking Login</h3>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <input type="text" placeholder="Username" name="username" formControlName="username" required #username>
+        &nbsp;
+        <input type="submit"  value="Login" class="generalButton" [disabled] = "form.get('username')?.invalid"><br>
+        <span *ngIf="failed" id="error" style="color:rgb(231, 63, 63); font-size:10px;">No Username Found!</span>
+    </form>    
+    <a routerLink="/new-account">Register Now</a> <span style="color:var(--blue); margin:0px 2px;">|</span> <a routerLink="/password-reset">Forgot Password?</a>
+</div>

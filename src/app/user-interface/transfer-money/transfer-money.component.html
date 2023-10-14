@@ -1,0 +1,30 @@
+<div class="transfer-money">
+    <h3>Transfer Money within this bank instantly!</h3>
+    <form class="transfer-form" [formGroup]="transferForm" (ngSubmit)="transferAmount()">
+        <div class="form-group">
+            <label for="accountnumber">To Account Number:</label>
+            <input type="number" name="funded-account-number" id="funded-account-number" formControlName="fundedAccount" required >
+            <span class="error" *ngIf="formSubmitted && transferForm.get('fundedAccount')!.hasError('required')" >Account number is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="Amount">Amount</label>
+            <input type="number" name="amount" id="amount" formControlName="amount" required>
+            <span class="error" *ngIf="formSubmitted && transferForm.get('amount')!.hasError('required')">Amount is required.</span>
+        </div>
+        <div class="form-group">
+            <label for="description">Want to add note? <span style="color:#979797; font-size:14px;">(optional)</span></label>
+            <input type="text" name="desc" id="desc" formcontrol="desc" maxlength="30">
+        </div>
+        <div class="form-group">
+            <label for="password">Your Password</label>
+            <input type="password" name="password" id="password" formControlName="password" required>
+            <span class="error" *ngIf="formSubmitted && transferForm.get('amount')!.hasError('required')">Password is required.</span>
+        </div>
+        <div class="form-group">
+            <button (click)="makeRealButtonAlive()" class="generalButton transfer" *ngIf="!showButton">Transfer</button>
+            <button type="submit" *ngIf="showButton" class="generalButton" >Sure?</button>
+            &nbsp;
+            <button (click)="makeRealButtonAlive()" *ngIf="showButton" class="generalButton" >Cancel</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+<div class="user-management">
+    <div class="left-sidebar admin-menu">
+        <ul>
+            <li>
+                <div id="add-user" (click)="decide('add-user')">Add Customer</div>
+            </li>
+            <li>
+                <div id="change-user-details" (click)="decide('change-user-details')">Change Customer Details</div>
+            </li>
+            <li>
+                <div id="transaction-management" (click)="decide('transaction-management')">Transaction Management</div>
+            </li>
+            <li>
+                <div id="add-admin" (click)="decide('add-admin')">Add Admin</div>
+            </li>
+            <li>
+                <div id="access-contact" (click)="decide('access-contact')">Contact Form Details</div>
+            </li>
+            <li>
+                <div id="access-loan-applied" (click)="decide('access-loan-applied')">Loan Applications</div>
+            </li>
+        </ul>
+    </div>
+    <div class="user-management-output" [ngSwitch]="decideComponent"> 
+        <div *ngSwitchCase="'add-user'"> 
+            <app-addaccount></app-addaccount>
+        </div>
+        <div *ngSwitchCase="'change-user-details'">
+            <app-changeuserdetails></app-changeuserdetails>
+        </div>
+        <div *ngSwitchCase="'transaction-management'">
+            <app-transaction-management></app-transaction-management>
+        </div>
+        <div *ngSwitchCase="'add-admin'">
+            <app-addadmin></app-addadmin>
+        </div>
+        <div *ngSwitchCase="'access-contact'">
+            <app-access-contact-forms></app-access-contact-forms>
+        </div>
+        <div *ngSwitchCase="'access-loan-applied'">
+            <app-access-loan-applied></app-access-loan-applied>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="login-form">
+    <form [formGroup]="login_form" (ngSubmit)="login_details()">
+        <div class="error_message_container">
+            <div *ngIf="login_form.get('accountnumber')?.hasError('required') || login_form.get('password')?.hasError('required')" class="error_message">Please fill out the details!</div>
+            <div *ngIf="isAuthenticated===false" class="error_message">Your login details are incorrect.<br>Please enter correct details.</div>
+        </div>
+        <div class="username">
+            <div class="label">
+                <label for="username">Username</label>
+            </div>
+            <div class="other">
+                <input type="text" name="username" id="username" readonly value="{{username}}" placeholder="Enter Username">
+            </div>
+        </div>
+        <div class="accno">
+            <div class="label">
+                <label for="accountnumber">Account Number</label>
+            </div>
+            <div class="other">
+                <input type="text" name="accountnumber" id="accountnumber" formControlName="accountnumber" placeholder="Account Number..." minlength="6" maxlength="6" required>
+                
+            </div>
+        </div>
+       
+        <div class="password">
+            <div class="label">
+                <label for="password">Password</label>
+            </div>
+            <div class="other">
+                <input type="password" formControlName="password" name="password" id="loginpassword" placeholder="Password..." required>
+                
+            </div>
+        </div>
+        
+        <div class="submit">
+            <button type="submit" [disabled]="login_form.invalid" class="generalButton">Login</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="add-admin">
+    <form class="add-admin-form" #adminAddForm="ngForm" (ngSubmit)=" adminSubmit()">
+        <div class="form-group">    
+            <label for="username">Username</label>
+            <input type="text" placeholder="John" name="username" id="username" [(ngModel)]="formValues.username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="{{inputType}}" name="password" id="password" [(ngModel)]="formValues.password" required>
+        </div>
+        <div class="form-group">
+            <label for="retype-password">Retype Password</label>
+            <input type="{{inputType}}" name="retype-password" id="retype-password" [(ngModel)]="retypepassword" required><br>
+            <span class="error_msg" *ngIf="retypepassword !== formValues.password">Please check both passwords!</span>
+            <br>    
+            <input type="button" value="Show Password" (click)="changeType()" class="passwordRevealButton">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="generalButton" [disabled]="retypepassword !== formValues.password || adminAddForm.invalid ">
+        </div>
+    </form>
+</div>

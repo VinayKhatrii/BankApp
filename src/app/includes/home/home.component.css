@@ -1,0 +1,36 @@
+.header-image{
+    position: relative;
+    background-image: url('../../../assets/images/HeaderHome.svg');
+    background-color: rgba(5, 1, 1, 0.311);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+.header-image h2, .header-image .header-button a, .header-image{
+    color:#ffffff;
+}
+.header-image h2{
+    font-size: 3rem;
+    margin:0;
+}
+.heading-desc p{
+    color:#ffffff;
+}
+.header-button a{
+    padding:10px 20px;
+    border:2px solid #ffffff;
+    border-radius: 30px;
+}
+@media (max-width:830px){
+    .loginAndWelcome .heading{
+        text-align: center;
+    }
+    .loginAndWelcome{
+        text-align: center;
+        flex-direction: column;
+    }
+}

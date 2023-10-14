@@ -1,0 +1,22 @@
+.login.admin{
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login.admin form{
+    border:1px solid var(--blue);
+    padding:30px;
+}
+.login.admin .form-group{
+   margin:10px;
+    text-align:center;
+}
+.login.admin .form-group input{
+   padding: 10px 10px;
+   margin-left:10px;
+}
+.login.admin .form-group input[type="submit"]{
+    margin-top:20px;
+    width: 50%;
+}

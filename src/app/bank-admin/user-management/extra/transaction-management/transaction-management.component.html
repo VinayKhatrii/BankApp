@@ -1,0 +1,24 @@
+<div class="transaction-management">
+    <h3>You can add transactions to user's account from here.</h3>
+    <form (ngSubmit)="submitTransaction()" name="addtransactionForm" #transactionForm='ngForm'>
+        <div class="form-group">
+            <label for="accountnumber">Account Number</label>
+            <input type="number" name="accountnumber" id="accountnumber" [(ngModel)]="details.accountnumber" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount" [(ngModel)]="details.amount" required>
+        </div>
+        <div class="form-group">
+            <label for="credit">Credit</label>
+            <input type="checkbox" name="credit" id="credit" [(ngModel)]="credit" >
+        </div>
+        <div class="form-group">
+            <label for="description">description</label>
+            <input type="text" maxlength="30" id="description" name="desciption" [(ngModel)]="details.description">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="generalButton" [disabled]="transactionForm.invalid">
+        </div>
+    </form>
+</div>

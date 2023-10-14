@@ -1,0 +1,74 @@
+<div class="container apply-for-loan">
+    <div class="formContainer">
+       <form (ngSubmit)="onSubmit(applyForLoan.form.valid)" #applyForLoan="ngForm">
+        <div class="form-group error_msg">
+            <p style="color:rgb(231, 63, 63); font-size:14px;">{{this.error_msg}}</p>
+        </div>
+        <div class="form-group">
+            <div class="name-group">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" [(ngModel)]="userData.first_name" required placeholder="John..">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" [(ngModel)]="userData.last_name" placeholder="Doe.." required>
+                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone" [(ngModel)]="userData.phone" placeholder="9876543210" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" [(ngModel)]="userData.email" placeholder="abc@xyz.com" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" [(ngModel)]="userData.address" placeholder="abc street, near xyz colony"  required>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="number" name="pincode" id="pincode" oninput="this.value = this.value.replace(/[^0-9]/g, '')" [(ngModel)]="userData.pincode"  placeholder="421004" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select name="country" id="country" [(ngModel)]="userData.country" required>
+                    <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="profession">Profession</label>
+                <input type="text" name="profession" id="profession" [(ngModel)]="userData.profession" required  placeholder="Software Developer" >
+            </div>
+            <div class="form-group">
+                <label for="loamAmt">Loan Amount</label>
+                <input type="number" name="loamAmt" id="loanAmt" [(ngModel)]="userData.loanAmtRequired" required  placeholder="1,00,000" >
+            </div>
+            <div class="form-group">
+                <label for="summary">Why Do You Need a Loan?</label>
+                <textarea name="summary" id="summary" cols="30" rows="10" [(ngModel)]="userData.summary"></textarea>
+            </div>  
+            <div class="form-group">
+                <button type="submit" class="generalButton" style="padding:7px 10px;">Submit</button>
+            </div>
+       </form>
+    </div>
+    <div class="loan-details-container">
+        <div class="loan-offers">
+            <div class="row">
+                <h2>Instant personal loan @ 10.0%</h2>
+            </div>
+            <div class="row">
+                <h2>Zero Processing Fees</h2>
+            </div>
+            <div class="row">
+                <h2>100% online application</h2>
+            </div>
+            <div class="row">
+                <h2>Apply upto ₹1 Cr</h2>
+            </div>
+        </div>
+    </div>
+</div>

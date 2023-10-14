@@ -1,0 +1,13 @@
+<div class="search-wrapper">
+
+    <input type="search" name="search" id="search" [(ngModel)]="query" (ngModelChange)="search()" placeholder="Search Here..." (focus)="showWrapper()" (blur)="hideWrapper()">
+
+    <div class="search-outlet" *ngIf="query.trim() != ''" [style.display]="wrapperVisible ? 'block' : 'none'">
+        <div class="result" *ngFor="let result of resultList" >
+            <a routerLink="{{result.value.link}}">{{ result.value.text}}</a>
+        </div>
+        <div class="nothing-found" *ngIf="resultList.length == 0">
+            Nothing Found
+        </div>
+    </div>
+</div>

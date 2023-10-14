@@ -1,0 +1,113 @@
+
+<div *ngIf="this.userData" class="user userdata bank">
+    <div class="sidebar user">
+        <div class="heading">
+            <h3 class="sentence-case">Welcome Back, {{this.userData.name}} {{this.userData.surname}}.</h3>
+        </div>
+        <div class="user button userdetails active" (click)="details('user')">
+            My Details
+        </div>
+        <div class="button acc" (click)="details('acc')">
+            Account Details
+        </div>
+        <div class="button address" (click)="details('address')"> Address</div>
+        <div class="button passbook" (click)="details('passbook')">Show Passbook</div>
+        <div class="button transfer-money" (click)="details('transfer-money')">Transfer Amount</div>
+
+        <div class="logout" (click)="details('logout')">
+            Log Out
+        </div>
+    </div>
+
+    <div class="outlet">
+        <div class="user close ">
+            <button class="generalButton cancel" (click)="close()">Close</button>
+        </div>
+        <div class="my-details" *ngIf="this.tabledetails.user">
+            <table>
+                <tr>
+                    <td>
+                        <h4> Username</h4>
+                       
+                    </td>
+                    <td>
+                        {{this.userData.username}}
+                    </td>
+                </tr>
+                <tr>
+                    <td><h4>Full Name</h4></td>
+                    <td class="sentence-case">{{this.userData.name}} {{this.userData.surname}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Minor</h4></td>
+                    <td class="sentence-case">{{this.userData.minor}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Telephone</h4></td>
+                    <td>{{this.userData.telephone}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Phone</h4></td>
+                    <td>{{this.userData.mobile}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Qualification</h4></td>
+                    <td>{{this.userData.qualification}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bal-popup" *ngIf="this.tabledetails.acc">
+            <table>
+                <tr>
+                    <td><h4>Account Number</h4></td>
+                    <td>{{this.userData.accountnumber}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Account Balance</h4></td>
+                    <td>{{this.userData.currency}}{{this.userData.accbalance}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Loan remaining</h4></td>
+                    <td>{{this.userData.currency}}{{this.userData.loanamt}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Loan Taken Till Date</h4></td>
+                    <td>{{this.userData.howmanyloan}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="address-pop" *ngIf="this.tabledetails.address">
+            <table>
+                <tr>
+                    <td><h4>Address</h4></td>
+                    <td>{{this.userData.fulladdress}}</td>
+                </tr>
+                <tr>
+                    <td><h4>State</h4></td>
+                    <td>{{this.userData.state}}</td>
+                </tr>
+                <tr>
+                    <td><h4>City</h4></td>
+                    <td>{{this.userData.city}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Phone</h4></td>
+                    <td>{{this.userData.mobile}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="transfer-amount" *ngIf="this.tabledetails.transfer">
+            <app-transfer-money></app-transfer-money>
+        </div>
+        <div class="passbook" *ngIf="this.tabledetails.passbook">
+            <app-passbook-component></app-passbook-component>
+        </div>
+        <div class="logout-component" *ngIf="this.tabledetails.logout">
+            <h3>Are you sure you want to log out?</h3><br>
+            <button (click)="logout()" class="generalButton logout">Log out</button>&nbsp;&nbsp;
+            <button (click)="details('user')" class="generalButton cancel">Cancel</button>
+        </div>
+    </div>
+    
+</div>

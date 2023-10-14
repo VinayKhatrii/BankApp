@@ -1,0 +1,31 @@
+<div class="changeUserDetails">
+    <form id="change-user" [formGroup]="changeDetailsForm" (ngSubmit)="this.submit()">
+        <div class="msg">Note that, Username and Account Number cannot be changed and you have to specify username to change user details.</div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="john" formControlName="username">
+        </div>
+        
+        <div class="form-group">
+            <label for="change-details-select">Select Change</label>
+            <select name="change-details-select" id="change-details-select" (ngModelChange)="setInputType()" formControlName="toChange">
+                <option *ngFor="let detail of details" [value]="detail" class="sentence-case">{{detail}}</option>   
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="minor-group" *ngIf="this.changeDetailsForm.value.toChange=='minor'; else elseBlock">
+                Is Minor? <input type="checkbox" name="minor" id="minor" [(ngModel)] ="result" formControlName="newValue">
+                <br>
+                <span class="hint">Check this if user is minor, else leave it and submit.</span>
+            </div>
+
+            <ng-template #elseBlock>
+                <label for="change-details-input" class="sentence-case">{{this.changeDetailsForm.value.toChange}}</label>
+                <input type="{{inputType}}" class="change-details-input" name="change-details-input" required formControlName="newValue">
+            </ng-template>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="generalButton" [disabled]="!changeDetailsForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+<footer class="container footer">
+        <div class="footer-widgets">
+            <div class="footerWidget">
+                <h2>About Us
+                </h2>
+                <p>At International Bank, we believe in building strong relationships with our customers by understanding their aspirations and providing personalized financial services. </p>
+                
+            </div>
+
+            <div class="footerWidget">
+                <h2>Follow Us</h2>
+                <div class="socialNav">
+
+                    <ul *ngFor="let link of socialLinks">
+                        <li><a href="#" class="{{link.appclass+' '+link.appName}}"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerWidget">
+                <h2>Policies</h2>
+                <ul class="policies-nav">
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a routerLink="/terms-conditions">Terms and Conditions</a></li>
+                </ul>
+
+            </div>
+            <div class="footerWidget">
+                <h2> Quick Links</h2>
+                <ul class="footerNav">
+                    <li><a routerLink="/contact-us" (click)="scrollToTop()">Contact Us</a></li>
+                    <li><a routerLink="/new-account" (click)="scrollToTop()">Open an Account</a></li>
+                    <li><a routerLink="/apply-for-loan" (click)="scrollToTop()">Apply For a Loan</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>  
+        <div class="copyright">
+            <p>
+                Copyright &copy; 2023 <a href="{{websiteUrl}}">Bank App</a>. All Rights Reserved.
+            </p>
+            <br>
+        </div>
+</footer>

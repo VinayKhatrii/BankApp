@@ -1,0 +1,41 @@
+<div class="topBar flex-center container">
+    <div class="reverse-responsive row">
+        <div class="logo">
+            <a routerLink="/">
+                <img src="{{pathToImages}}/logo.svg" alt="Logo of Demo Bank" class="bankLogo" width="100"
+                    height="70">
+            </a>
+        </div>
+        <div class="flex-center">
+            <nav class="topBarNav">
+                <ul class="row">
+                    <li *ngFor="let link of navLinks"><a [routerLink]="link.path">{{ link.label }}</a></li>
+                </ul>
+            </nav>
+
+            <nav class="topBarMobNav">
+                <a (click)="toggleNav()" class="menuBar">
+                    <div class="menuBarDiv"></div>
+                    <div class="menuBarDiv"></div>
+                    <div class="menuBarDiv"></div>
+                </a>
+                <div class="navMobile" [ngStyle]="{ 'width': isNavVisible ? '250px' : '0' }">
+                    <span class="close-icon" (click)="toggleNav()">&times;</span>
+                    <ul>
+                        <li *ngFor="let link of navLinks"><a [routerLink]="link.path"
+                                (click)="toggleNav()">{{link.label}}</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="search-place">
+        <app-search></app-search>
+    </div>
+</div>
+<div id="page-content">
+    <router-outlet></router-outlet>
+</div>
+<!-- This will generate menu output dynamically-->
+
+<app-footer></app-footer>

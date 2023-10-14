@@ -1,0 +1,82 @@
+
+.topBar{
+    background-color: var(--blue);
+    overflow:hidden;
+}
+.topBar ul li{
+    margin: 0 5px;
+}
+.topBar ul li a{
+    font-size:16px;
+    color:#ffffff;
+    border-bottom: 1px solid transparent;
+}
+.topBar ul li a:hover{
+    border-bottom: 2px solid #ffffff;
+    opacity: 1;
+}
+.topBarMobNav .menuBar div{
+    height:2px;
+    background-color: #ffffff;
+    width:20px;
+    margin-bottom: 4px;
+}
+
+@media screen and (min-width: 1200px){
+    .topBarMobNav{
+        display:none
+    }   
+}
+@media screen and (max-width:1200px){
+    .reverse-responsive{
+        flex-direction: row-reverse;
+    }
+    .topBar{
+        padding-left:30px;
+        padding-right: 30px;
+    }
+    .topBarNav{
+        display:none
+    }
+    .navMobile {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: var(--blue);
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+    
+    .navMobile ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .navMobile li {
+        padding: 8px 8px 8px 32px;
+    }
+    
+    .navMobile li a {
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+    }
+    
+    .navMobile li a:hover {
+        color: #f1f1f1;
+    }
+    
+    .navMobile .close-icon {
+        position: absolute;
+        top: 0;
+        color:#ffffff;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+}

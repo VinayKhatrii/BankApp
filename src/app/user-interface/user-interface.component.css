@@ -1,0 +1,86 @@
+.generalButton.user{
+    padding:10px;
+}
+.generalButton.logout{
+    padding:10px;
+}
+.generalButton.cancel{
+    padding:10px;
+}
+.user.userdata{
+    min-height: 300px;
+    display:flex;
+    padding: 3%;
+}
+.user.userdata .sidebar{
+    width:30%;
+    margin-right:30px;
+    border-right:2px solid var(--blue);
+}
+.user.userdata .sidebar div{
+    border:1px solid var(--blue);
+    margin:15px;
+    padding:10px;
+}
+.user.userdata .sidebar div:not(.user.userdata .sidebar div:first-child){
+    cursor:pointer;
+}
+.user.userdata .outlet{
+width:70%;
+}
+.outlet table{
+    width:80%;
+    border:1px solid var(--blue);
+}
+.outlet table td{
+    padding:10px;
+
+}
+.outlet table td:first-child{
+    width:50%;
+}
+.outlet table td h4:first-child::after{
+    content:" ->"
+}
+.outlet table td:last-child{
+    width:50%;
+}
+.user.close{
+    display:none;
+}
+@media (max-width:550px){
+.user.close{
+    display:block;  
+    margin:10px;
+    text-align: right;
+}
+.outlet{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0; 
+    overflow: visible;
+    width: 80vw !important;;
+    bottom:0;
+    z-index: 999;
+    padding:30px;
+    background-color: #fff;
+}
+.user.userdata .sidebar{
+    width:100%;  
+    border-right:none;
+
+}
+.outlet table{
+    width:100%;
+}
+}
+.user.userdata .active{
+    background-color: var(--blue);
+    color:#fff;
+}
+.user.userdata .sidebar div:not(:first-child):hover{
+    background-color: var(--blue);
+    color:#ffffff;
+    transition: 0.2s ease;
+}

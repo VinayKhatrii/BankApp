@@ -1,0 +1,33 @@
+
+<div class="passbook-details">
+    <h3>Your Account number: {{passbookDetails.accountnumber}}</h3>
+    <div class="headings">
+        <div class="date">Date</div>
+        <div class="amount">Amount</div>
+        <div class="description">Description</div>
+        <div class="credit">Credit</div>
+        <div class="debit">Debit</div>
+        <div class="balance">Balance</div>
+    </div>
+    <div *ngFor="let transaction of passbookDetails.transactions | keyvalue" class="transaction-container">
+        <div *ngFor="let detail of parseTransactionData(transaction.value | json)" class="transaction-row">
+            <div class="date">{{ transaction.key }}</div>
+            <div class="amount">{{ detail.amount }}</div>
+            <div class="description">{{ detail.description.trim() === "" ? "- -" : detail.description }}</div>
+
+            <div class="credit">
+                <span *ngIf="detail.credit else elseCreditBlock">&#10003;</span>
+                <ng-template #elseCreditBlock>
+                    -
+                </ng-template>
+            </div>
+            <div class="debit">
+                <span *ngIf="detail.debit else elsedebitBlock">&#10003;</span>
+                <ng-template #elsedebitBlock>
+                    -
+                </ng-template>
+            </div>
+            <div class="balance">{{ detail.balance }}</div>
+        </div>
+    </div>
+</div>
