@@ -1,1 +1,20 @@
-<p>open-an-account works!</p>
+<div class="container">
+    <div class="info">
+        <h3>Please fill out this form,<br>Our Team will get in touch with you soon!</h3>
+    </div>
+    <div class="new-account-form">
+        <form (ngSubmit)="submit()" [formGroup]="formDetails">
+            <div class="group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Full Name" formControlName="name">
+            </div>
+            <div class="group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="user@example.com.." formControlName='email'>             
+            </div>
+            <div class="group">
+                <input type="submit" value="Submit" class="generalButton">
+            </div>
+        </form>
+    </div>
+</div>
