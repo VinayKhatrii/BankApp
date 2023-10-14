@@ -15,7 +15,7 @@ export class AccessContactFormsComponent {
   contact_form_details:any = []
   accountnumber = 202302;
   ngOnInit(){
-      this.http.get(`${this.api.apiUrl}api/contactDetails`).subscribe(
+      this.http.post(`${this.api.apiUrl}api/contactDetails`, {}).subscribe(
         (response:any) => {
           if(response.success){
             this.contact_form_details = response.details;

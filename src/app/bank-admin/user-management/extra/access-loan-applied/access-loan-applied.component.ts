@@ -14,7 +14,7 @@ export class AccessLoanAppliedComponent {
   ){}
   loanApplications:any = [];
   ngOnInit(){
-    this.http.get(`${this.api.apiUrl}api/loanApplications`).subscribe((response:any)=>{
+    this.http.post(`${this.api.apiUrl}api/loanApplications`, {}).subscribe((response:any)=>{
       if(response.success){
         this.loanApplications = response.details;
       }

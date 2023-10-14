@@ -11,14 +11,13 @@ const app = express();
 const port = 5000;
 
 const corsOptions = {
-    origin: 'http://osrwebservices.com',    //Angular app's URL
+    origin: 'http://localhost:4200',    //Angular app's URL
 };
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.get("/cors-test", (req, res) => {
-    res.send("CORS test route");
-});
+
+
 app.get("/", (req, res) => {
     res.send("International Bank Server");
 });
@@ -98,7 +97,7 @@ app.post("/api/contactform", async (req, res) => {
     }
 });
 
-app.get("/api/contactDetails",cors, async (req, res) => {
+app.post("/api/contactDetails", async (req, res) => {
     try{
       const details = await saveDetails.getContactFormDetails();
       res.send({ success: true , details: details});
@@ -119,7 +118,7 @@ app.post("/api/loan%apply", async (req, res)=>{
     }
 });
 
-app.get("/api/loanApplications/", async (req, res) => {
+app.post("/api/loanApplications/", async (req, res) => {
     try{
         const details = await saveDetails.getLoanApplications();
         res.send({ success: true , details: details});
