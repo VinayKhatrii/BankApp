@@ -35,9 +35,10 @@ import { TransferMoneyComponent } from './user-interface/transfer-money/transfer
 import { PassbookComponentComponent } from './user-interface/passbook-component/passbook-component.component';
 import { AccessContactFormsComponent } from './bank-admin/user-management/extra/access-contact-forms/access-contact-forms.component';
 import { AccessLoanAppliedComponent } from './bank-admin/user-management/extra/access-loan-applied/access-loan-applied.component';
+import { NewApplicationsComponent } from './bank-admin/user-management/extra/new-applications/new-applications.component';
 
 @NgModule({
-  declarations: [AppComponent, ContactUsComponent, OpenAnAccountComponent, ApplyForLoanComponent, AboutUsComponent, HomeComponent,  OffersComponent, OnlineLoginComponent, AutoCounterComponent, BestServicesComponent, FooterComponent, MakesOutBestComponent, BankAdminComponent, LoginComponent, UserInterfaceComponent, ForgotPasswordComponent, SearchComponent, UserManagementComponent, AddaccountComponent, AddadminComponent, ChangeuserdetailsComponent, TransactionManagementComponent, NotFoundComponent, PrivacyPolicyComponent, TermsConditionsComponent, TransferMoneyComponent, PassbookComponentComponent, AccessContactFormsComponent, AccessLoanAppliedComponent],
+  declarations: [AppComponent, ContactUsComponent, OpenAnAccountComponent, ApplyForLoanComponent, AboutUsComponent, HomeComponent,  OffersComponent, OnlineLoginComponent, AutoCounterComponent, BestServicesComponent, FooterComponent, MakesOutBestComponent, BankAdminComponent, LoginComponent, UserInterfaceComponent, ForgotPasswordComponent, SearchComponent, UserManagementComponent, AddaccountComponent, AddadminComponent, ChangeuserdetailsComponent, TransactionManagementComponent, NotFoundComponent, PrivacyPolicyComponent, TermsConditionsComponent, TransferMoneyComponent, PassbookComponentComponent, AccessContactFormsComponent, AccessLoanAppliedComponent, NewApplicationsComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, MatDatepickerModule, MatInputModule],
   providers: [],
   bootstrap: [AppComponent],

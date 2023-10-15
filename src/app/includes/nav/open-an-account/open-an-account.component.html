@@ -1,20 +1,39 @@
 <div class="container">
-    <div class="info">
-        <h3>Please fill out this form,<br>Our Team will get in touch with you soon!</h3>
+    <div>
+        <div class="info">
+            <h3>Please fill out this form,<br>Our Team will get in touch with you soon!</h3>
+        </div>
+        <div class="new-account-form">
+            <span *ngIf="error" class="error">Please fill out all details</span>
+            <form (ngSubmit)="submit()" [formGroup]="formDetails">
+                <div class="group">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" placeholder="Full Name" formControlName="name">
+                </div>
+                <div class="group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="user@example.com.." formControlName='email'>             
+                </div>
+                <div class="group">
+                    <label for="phone">Contact</label>
+                    <input type="number" name="phone" id="phone" placeholder="9876543210" formControlName='contact'>             
+                </div>
+                <div class="group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="21" formControlName='age'>             
+                </div>
+                <div class="group">
+                    <label for="qualification">Qualification</label>
+                    <input type="text" name="qualification" id="qualification" placeholder="Software Engineer" formControlName='qualification'>             
+                </div>
+                <div class="group">
+                    <input type="submit" value="Submit" class="generalButton" *ngIf="!decide">
+                    <div style="color: var(--blue);font-weight:bold;" *ngIf="decide">Submitted!</div>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="new-account-form">
-        <form (ngSubmit)="submit()" [formGroup]="formDetails">
-            <div class="group">
-                <label for="name">Your Name</label>
-                <input type="text" name="name" id="name" placeholder="Full Name" formControlName="name">
-            </div>
-            <div class="group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="user@example.com.." formControlName='email'>             
-            </div>
-            <div class="group">
-                <input type="submit" value="Submit" class="generalButton">
-            </div>
-        </form>
+    <div class="side-image">
+        <img src="assets/images/new-account.jpg" alt="">
     </div>
 </div>

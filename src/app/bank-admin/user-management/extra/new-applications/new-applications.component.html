@@ -1,0 +1,22 @@
+<div class="new-applications">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>age</th>
+                <th>Qualification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of newApplications">
+                <td>{{detail.name}}</td>
+                <td>{{detail.email}}</td>
+                <td>{{detail.contact}}</td>
+                <td>{{detail.age}}</td>
+                <td>{{detail.qualification}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

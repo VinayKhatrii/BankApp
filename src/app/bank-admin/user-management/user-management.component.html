@@ -19,6 +19,9 @@
             <li>
                 <div id="access-loan-applied" (click)="decide('access-loan-applied')">Loan Applications</div>
             </li>
+            <li>
+                <div id="new-applications" (click)="decide('new-applications')">New Acc Applications</div>
+            </li>
         </ul>
     </div>
     <div class="user-management-output" [ngSwitch]="decideComponent"> 
@@ -39,6 +42,9 @@
         </div>
         <div *ngSwitchCase="'access-loan-applied'">
             <app-access-loan-applied></app-access-loan-applied>
+        </div>
+        <div *ngSwitchCase="'new-applications'">
+            <app-new-applications></app-new-applications>
         </div>
     </div>
 </div>

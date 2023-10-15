@@ -1,0 +1,35 @@
+
+@media (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+}
+.group{
+    padding:10px;
+    margin:10px;
+}
+input:not(input[type="submit"]){
+    width:100%;
+    padding: 10px 5px;
+}
+.container{
+    display:flex;
+    justify-content: space-between;
+}
+.container > div{
+    width:50%;
+    padding:30px;
+}
+.container .side-image {
+    text-align: center;
+    vertical-align: middle;
+}
+.container .side-image img{
+    width:90%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px #000;
+}
+.error{
+    font-size: 14px;
+    color: rgb(214, 17, 17);
+}
