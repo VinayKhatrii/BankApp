@@ -18,11 +18,6 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 
-app.get("/", (req, res) => {
-    res.send("International Bank Server");
-});
-
-
 app.post("/api/isLoggedIn", async (req, res)=>{
     try{
         const data=req.body;
