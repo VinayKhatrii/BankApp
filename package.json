@@ -29,7 +29,12 @@
     "ngx-cookie-service": "^16.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "zone.js": "~0.13.0",
+    "body-parser": "^1.20.2",
+    "currency-converter-lt": "^2.0.0",
+    "express": "^4.18.2",
+    "mongodb": "^5.8.1",
+    "nodemon": "^3.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.1",
